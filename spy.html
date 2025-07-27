@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="spy_style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rubik:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <title>Lets Dig!</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Side Nav Bar -->
+        <aside class="left-sidebar">
+            <div class="nav-item"><img src="images/logo.png" alt="logo" class="i-image"></div>
+            <div class="page">
+                <a href="Headquaters.html">
+                    <div class="icon i"><img src="images/headquarters.icon.png" class="i-image" alt="HQ"></div>
+                </a>
+                <a href="">
+                    <div class="icon i"><img src="images/Cases-icon.png" class="i-image" alt="HQ"></div>
+                </a>
+                <a href=""></a>
+                <div class="icon-hq"><img src="images/spy-icon.png" class="i-image" alt="HQ"></div></a>
+                <div class="nav-text">Spy Time</div>
+                <a href="">
+                    <div class="icon i"><img src="images/progress-icon1.png" class="i-image" alt="HQ"></div>
+                </a>
+                <a href=""></a>
+                <div class="icon i"><img src="images/riddles-icon.png" class="i-image" alt="HQ"></div></a>
+            </div>
+            <div class="pfp"><img src="images/male-pfp.png" id="profile" class="i-image i-pfp" alt="pfp"></div>
+        </aside>
+
+        <!-- Middle container -->
+        <div class="main">
+
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <p>Case Sensitive</p>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Channel your inner detective Here!"
+                        class="search-input">
+                </div>
+                <div class="search-icon"><img src="images/search.png" class="search-img" alt="search"></div>
+            </div>
+
+            <div class="middle-content">
+                <h2 class="main-head">Let’s Smash This Mystery Like <br>Hope on a Monday!</h2>
+                <div class="scene">
+                    <div class="case-file s-icons" onclick="openReport()"></div>
+                    <div class="board s-icons" id="greenboardToggle"></div>
+                    <div class="scene-head">
+                        <div class="detectiveName name" data-format="Detective {name} view"></div>
+                        <div class="place">Headquarters</div>
+                    </div>
+                    <div class="scene-img"></div>
+                    <div class="scene-footer">
+                        <div class="s-description">
+                            The detective is at headquarters reviewing a new case filed this morning to begin the
+                            investigation.
+                        </div>
+                    </div>
+                    <a href="scenes.html" style="text-decoration: none;">
+                        <div class="select2 selection">Talk To Bilal | The Father</div>
+                    </a>
+                    <a href="scenes.html"></a>
+                    <div class="select1 selection">Contact Zara | The Mother</div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <aside class="right-panel">
+        <div class="detective-profile">
+            <img src="images/male-pfp.png" id="profile2" alt="Detective">
+            <h2 class="detectiveName" data-format="Detective {name}"></h2>
+
+            <div class="Selectionbox">
+                <img class="cat-tag" src="images/cat.png" alt="">
+                <div class="select3">
+                    <img src="images/phone.png" alt="">
+                    <p>Phone’s buzzing...Zee’s here to fix your mess.</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- detective board -->
+    <div id="greenboard" class="greenboard hidden">
+        <div class="greenboard-header">
+            <span class="board-title">🧠 The Brain Dumpster</span>
+            <div class="window-controls">
+                <button id="resizeToggle" title="Toggle Maximize/Minimize">🡺🡸</button>
+                <button id="closeBoard" title="Close">✕</button>
+            </div>
+        </div>
+        <div class="greenboard-tools">
+            <button id="addSticky">📝</button>
+            <button id="drawMode">✍️</button>
+            <button id="markerMode">🖊️</button>
+            <button id="highlightMode">🖍️</button>
+            <button id="eraserMode">🧽</button>
+            <label for="colorPicker" class="color-label">🎨
+                <input type="color" id="colorPicker" value="#ffffff" />
+            </label>
+            <button id="clearCanvas">🧼</button>
+            <button id="saveBoard">💾</button>
+        </div>
+        <div class="greenboard-body">
+            <canvas id="canvas"></canvas>
+        </div>
+    </div>
+
+    <div id="background">
+        <div class="white-area">
+            <div class="white-head">Case Report | Where's the Baby?</div>
+            <hr>
+            <div class="white-content">
+                <p><span style="font-size: 18px; font-weight: 500;">🕵️‍♂️ CASE FILE: “Where’s the Baby?”</span>
+                    <br><br>
+                    Case ID: 001-AYLA-MYSTERY <br>
+                    Status: Activated | Parental Panic Level: 11/10 <br>
+                    Filed By: Mr. Bilal, distressed father, caffeine-deprived <br>
+                    Date Reported: 21 July 2025 <br>
+                    Time: 07:43 AM <br>
+                    Location: Residence now suspiciously quiet <br> <br>
+                    <hr> <br>
+                    <span style="font-size: 18px; font-weight: 500;">🔍 SUBJECT: AYLA (The Vanishing VIP)</span>
+                    <br><br>
+                    Age: 5 years <br>
+                    Last Seen Wearing: Pink unicorn pajamas (glitter situation: probable) <br>
+                    Medical Info: Energetic, healthy, known to lecture adults on why broccoli is evil <br><br>
+                    <hr> <br>
+                    <span style="font-size: 18px; font-weight: 500;">📞 REPORT FROM FATHER</span> <br><br>
+                    <span style="text-align: center;"><i>“I woke up and… no one was there. Just me, my slippers, and
+                            existential dread. Rayya's gone. Her mom’s not answering. I’ve checked under the bed, behind
+                            the fridge, and even in the laundry basket—nothing.”</i></span> <br><br>
+                    <hr><br>
+                    <span style="font-size: 18px; font-weight: 500;">⚠️ PRIME SUSPECT (for now): THE MOTHER</span>
+                    <br><br>
+                    Relationship: Mother of the child <br>
+                    Current Status: Unreachable. <br>
+                    Phone: Powered off or possibly thrown into a volcano <br>
+                    Last Known Behavior: Emotional. Possibly planning a short escape. Possibly over juice box politics.
+                    <br><br>
+                    <hr> <br>
+                    <span style="font-size: 18px; font-weight: 500;">🧠 DETECTIVE'S NOTES</span><br> <br>
+                    No clear signs of struggle—unless you count the emotional one on Mr. Bilal’s face <br>
+
+                    House checked: child-sized chaos level is suspiciously low <br>
+
+                    Mom’s vanishing act seems strategic. Baby's vanishing act? Alarming. <br>
+
+                    Cereal untouched. Baby toys in place. Parental peace destroyed. <br><br>
+                    <hr><br>
+                    <span style="font-size: 18px; font-weight: 500;">🗣️ INSTRUCTIONS TO TEAM:</span><br> <br>
+                    "We’re treating this as an active case. Suspected parental drama in play. Find out where Mom went.
+                    More importantly, find Rayya before she starts a podcast about it.”<br> <br>
+
+                </p>
+            </div>
+            <button class="done" onclick="closeReport()">Lets Dive into the Mystery!</button> <br> <br><br>
+        </div>
+    </div>
+    <script src="detectiveName.js"></script>
+    <script src="spy_script.js"></script>
+</body>
+
+</html>
